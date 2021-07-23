@@ -70,7 +70,7 @@ Below json represent error object:
 ### Example of fail response
 ```
 {
-  "status": "NOT_FOUND",
+  "status": "BAD_REQUEST",
   "errors": [
     {
   "reason": "INVALID_VALUE",
