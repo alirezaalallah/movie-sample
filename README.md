@@ -1,5 +1,5 @@
 # Movie sample application, enjoy it! :slightly_smiling_face:
-Simple REST API application to obtain movie information from multiple source (OMDB,CSV,...).  
+Simple REST API application to obtain movie's information from multiple source (OMDB,CSV,...) using [Spring Boot](https://spring.io/).  
 In this manual we describe structure of response and each service (url,param,response structure) describe in detail in file `how_to_test.md`.
 
 ## Application response format (ApiResponse)
