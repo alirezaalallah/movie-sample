@@ -7,3 +7,4 @@
 * Pumping application using Jmeter and performance tuning
 * Enable metrics to monitor (Prometheus)
 * Enable distributed tracing (zipkin,...)
+* Add more unit tests and integration test
