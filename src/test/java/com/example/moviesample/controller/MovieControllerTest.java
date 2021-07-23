@@ -52,7 +52,7 @@ public class MovieControllerTest {
 
     @Test
     public void givenNullTitle_thenReturnValidationErrors() throws Exception {
-        ApiErrorDto error = ApiErrorDto.builder().reason(Reason.INVALID_VALUE).message("title is required").build();
+        ApiErrorDto error = ApiErrorDto.builder().reason(Reason.REQUIRED_FIELD).param("title").message("Param is missing").build();
         ApiResponseDto apiResponseDto = ApiResponseDto.builder().errors(error).badRequest().build();
 
         mvc.perform(get(GET_MOVIE_INFO).header(AUTHORIZATION_HEADER, createJwtHeader(USER_1))

@@ -132,7 +132,7 @@ public class MovieExceptionHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleMissingServletRequestParameter(MissingServletRequestParameterException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         ApiErrorDto error = ApiErrorDto.builder()
                 .reason(Reason.REQUIRED_FIELD)
-                .message(ex.getMessage())
+                .message("Param is missing")
                 .param(ex.getParameterName())
                 .build();
         ApiResponseDto response = ApiResponseDto.builder().errors(error).badRequest().build();
