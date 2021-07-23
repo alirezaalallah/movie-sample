@@ -30,7 +30,7 @@ public class MovieController {
     }
 
     @GetMapping(value = "/info", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ApiResponseDto> get(@Valid @PathParam("title") @NotNull(message = "title is required") String title) {
+    public ResponseEntity<ApiResponseDto> get(@Valid @RequestParam("title") @NotNull(message = "title is required") String title) {
         ApiResponseDto apiResponseDto = movieService.checkMovieWonState(title);
 
         return ResponseEntity.ok().body(apiResponseDto);
@@ -46,8 +46,7 @@ public class MovieController {
 
     @GetMapping(value = "/top-ten")
     public ResponseEntity<ApiResponseDto> topTen(@Valid
-                                                 @DefaultValue("0")
-                                                 @PathParam("page")
+                                                 @RequestParam(value = "param1", defaultValue = "0")
                                                  @Range(min = 0, max = 10, message = "Invalid range for page param")
                                                          Integer page) {
         ApiResponseDto apiResponseDto = movieService.getTopTen(page);

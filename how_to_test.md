@@ -9,7 +9,6 @@ There is three service available in movie service as below:
 * User token service to obtain JWT token belongs to user for use movie services.
 **POST** `api/v1/user/getToken`
 
-
 ### Obtain JWT token:
 All services should have authorization `JWT token` in request header that users receive from user service base on user service.  
 To obtain JWT token you send request to user service as below:  
@@ -97,5 +96,72 @@ We must use JWT token in authorization header as below:
 }
 ```
 
+### Get top ten rated movies
+**URL GET:** `/api/v1/movie/top-ten`  
+**PARAM**: `page` for pagination (min:0 ,max:10) **Default is 0**  
+**HTTP Status codes**
+* **200 OK:** in case of success response and show top ten rate movies.
+* **400 BAD_REQUEST:** in case of fail response, In this case error field contains errors.
+
+**Sample Test**: `curl -X POST -H "Authorization: Bearer <TOKEN>" http://localhost:8080/api/v1/movie/top-ten`
+
+**Result:**
+```
+{
+   "status":"OK",
+   "result":[
+      {
+         "name":"Test-Moive9",
+         "rate":10.0,
+         "boxOffice":29000.00
+      },
+      {
+         "name":"Test-Moive8",
+         "rate":10.0,
+         "boxOffice":28000.00
+      },
+      {
+         "name":"Test-Moive7",
+         "rate":10.0,
+         "boxOffice":27000.00
+      },
+      {
+         "name":"Test-Moive6",
+         "rate":10.0,
+         "boxOffice":26000.00
+      },
+      {
+         "name":"Test-Moive5",
+         "rate":10.0,
+         "boxOffice":25000.00
+      },
+      {
+         "name":"Test-Moive4",
+         "rate":10.0,
+         "boxOffice":24000.00
+      },
+      {
+         "name":"Test-Moive3",
+         "rate":10.0,
+         "boxOffice":23000.00
+      },
+      {
+         "name":"Test-Moive2",
+         "rate":10.0,
+         "boxOffice":22000.00
+      },
+      {
+         "name":"Test-Moive10",
+         "rate":10.0,
+         "boxOffice":21100.00
+      },
+      {
+         "name":"Test-Moive2",
+         "rate":10.0,
+         "boxOffice":21000.00
+      }
+   ]
+}
+```
 
 
