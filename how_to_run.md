@@ -1,5 +1,6 @@
 # How to run movie service?
-This file describes to how we can run service, you can run movie service by below command:
+This file describes to how we can run service, you can run movie service by below command:  
+This application is written base on Java 11.  
 >`mvn spring-boot:run`
 
 Also, you can change below properties and `application.properties` file:
