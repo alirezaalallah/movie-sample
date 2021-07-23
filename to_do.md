@@ -4,3 +4,6 @@
 * Enable Swagger Api
 * Enable Jacoco for test report and code coverage issue  
 * Enable circuit breaker feature (can be add hytrix,...) for handle issuer about communication with OMDB api and handle high rate .... 
+* Pumping application using Jmeter and performance tuning
+* Enable metrics to monitor (Prometheus)
+* Enable distributed tracing (zipkin,...)
