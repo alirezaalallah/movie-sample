@@ -30,11 +30,11 @@ We must use JWT token in authorization header as below:
 
 ## EXAMPLES
 ### Movie info service
-**URL GET:** `http://localhost:8080/api/v1/movie/info`  
+**URL GET:** `/api/v1/movie/info`  
 **PARAM**: `title`  
 **HTTP Status codes**
-* **200:** in case of success response and show movie's information, in this result contains movie's information.    
-* **400:** in case of fail response, In this case error field contains errors   
+* **200 OK:** in case of success response and show movie's information, in this result contains movie's information.    
+* **400 BAD_REQUEST:** in case of fail response, In this case error field contains errors   
 
 **Sample Test**: `curl -X GET -H "Authorization: Bearer <TOKEN>" http://localhost:8080/api/v1/movie/info?title=batman`  
 
@@ -81,6 +81,21 @@ We must use JWT token in authorization header as below:
    }
 }
 ``` 
+### Give rate to movie service
+**URL POST:** `/api/v1/movie/rate`  
+**PARAM**: `title`  
+**HTTP Status codes**
+* **201 CREATED:** in case of success response and show rate to movie is done.
+* **400 BAD_REQUEST:** in case of fail response, In this case error field contains errors.
+
+**Sample Test**: `curl -X POST -d '{"title":"batman","value":"5"}' -H "Content-type:application/json" -H "Authorization: Bearer <TOKEN>" http://localhost:8080/api/v1/movie/rate?title=batman`
+
+**Result:**  
+```
+{
+   "status":"CREATED"
+}
+```
 
 
 
