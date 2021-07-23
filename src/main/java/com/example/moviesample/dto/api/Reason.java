@@ -1,0 +1,11 @@
+package com.example.moviesample.dto.api;
+
+public enum Reason {
+    REQUIRED_FIELD,
+    OMDB_API_BUSINESS_ERROR,
+    INVALID_VALUE,
+    OMDB_COMMUNICATION_ERROR,
+    OMBD_EMPTY_RESULT,
+    USER_DUPLICATE_RATE,
+    OMDB_RESPONSE_PARSE_ERROR
+}
