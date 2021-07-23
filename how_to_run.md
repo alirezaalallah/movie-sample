@@ -4,11 +4,11 @@ This file describes to how we can run service, you can run movie service by belo
 
 Also, you can change below properties and `application.properties` file:
 
->spring.datasource.url=jdbc:h2:mem:movieDB
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=password
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+>spring.datasource.url=jdbc:h2:mem:movieDB  
+spring.datasource.driverClassName=org.h2.Driver  
+spring.datasource.username=sa  
+spring.datasource.password=password  
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect  
 spring.jpa.hibernate.ddl-auto=create-drop  
 jwt.secret=mySecretKey  
 openMovieDatabase.url=http://www.omdbapi.com/  
