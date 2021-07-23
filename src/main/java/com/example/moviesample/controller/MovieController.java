@@ -1,10 +1,9 @@
 package com.example.moviesample.controller;
 
-import com.example.moviesample.dto.api.RateRequestDto;
 import com.example.moviesample.dto.api.ApiResponseDto;
+import com.example.moviesample.dto.api.RateRequestDto;
 import com.example.moviesample.service.MovieService;
 import org.hibernate.validator.constraints.Range;
-import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,8 +14,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import javax.websocket.server.PathParam;
 
 @RestController
 @RequestMapping("api/v1/movie")
@@ -46,7 +43,7 @@ public class MovieController {
 
     @GetMapping(value = "/top-ten")
     public ResponseEntity<ApiResponseDto> topTen(@Valid
-                                                 @RequestParam(value = "param1", defaultValue = "0")
+                                                 @RequestParam(value = "page", defaultValue = "0")
                                                  @Range(min = 0, max = 10, message = "Invalid range for page param")
                                                          Integer page) {
         ApiResponseDto apiResponseDto = movieService.getTopTen(page);
