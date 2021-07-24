@@ -12,7 +12,7 @@ There is three service available in movie service as below:
 ### Obtain JWT token:
 All services should have authorization `JWT token` in request header that users receive from user service base on user service.  
 To obtain JWT token you send request to user service as below:  
-`curl -X POST -d "user=ali" http://localhost:8080/api/v1/user/getToken`
+`curl -X POST -d "user=ali" http://localhost:8080/api/v1/user/getToken`  
 After run above command , result would be as below:
 >`{
 "user":"ali",
