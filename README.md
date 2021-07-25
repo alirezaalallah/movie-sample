@@ -8,7 +8,7 @@ Below Json represent total structure of Application's response:
 {
   "status": STATUS (OK,CREATED,BAD_REQUEST),
   "result": OBJ (movie,...)
-  "errors": ARRAY(ApiError)
+  "errors": ARRAY(ApiErrors...)
 }
 ```
 `status`: status of the operation such as (`OK`,`NOT_FOUND`,`BAD_REQUEST`,`....`)  
