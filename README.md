@@ -7,7 +7,7 @@ Below Json represent total structure of Application's response:
 ```
 {
   "status": STATUS (OK,CREATED,BAD_REQUEST),
-  "result": MOVIE 
+  "result": OBJ (movie,...)
   "errors": array(ApiError)
 }
 ```
