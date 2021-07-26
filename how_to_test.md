@@ -100,7 +100,7 @@ We must use JWT token in authorization header as below:
 * **200 OK:** in case of success response and show top ten rate movies.
 * **400 BAD_REQUEST:** in case of fail response, In this case error field contains errors.
 
-**Sample Test**: `curl -X POST -H "Authorization: Bearer <TOKEN>" http://localhost:8080/api/v1/movie/top-ten`
+**Sample Test**: `curl -X GET -H "Authorization: Bearer <TOKEN>" http://localhost:8080/api/v1/movie/top-ten`
 
 **Result:**
 ```
