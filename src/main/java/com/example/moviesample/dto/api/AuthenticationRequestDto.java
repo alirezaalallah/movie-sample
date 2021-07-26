@@ -1,0 +1,48 @@
+package com.example.moviesample.dto.api;
+
+import javax.validation.constraints.NotNull;
+import java.util.Objects;
+
+public class AuthenticationRequestDto {
+    @NotNull(message = "username is required")
+    private String username;
+    @NotNull(message = "password is required")
+    private String password;
+
+    public AuthenticationRequestDto() {
+    }
+
+    public AuthenticationRequestDto(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AuthenticationRequestDto that = (AuthenticationRequestDto) o;
+        return Objects.equals(username, that.username) && Objects.equals(password, that.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username, password);
+    }
+}

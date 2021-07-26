@@ -12,15 +12,12 @@ There is three service available in movie service as below:
 ### Obtain JWT token:
 All services should have authorization `JWT token` in request header that users receive from user service base on user service.  
 To obtain JWT token you send request to user service as below:  
-`curl -X POST -d "user=ali" http://localhost:8080/api/v1/user/getToken`  
+`curl -X POST -H "Content-type: application/json"  -d '{"username":"Adrian","password":"Adrian"}' http://localhost:8080/api/v1/user/getToken`  
 After run above command , result would be as below:
 >`{
-"user":"ali",
+"user":"Adrian",
 "token":"Bearer <JWT TOKEN>"
 }`
-
-**NOTE:**  
-We allow any user of these parameters to pass through. This was done intentionally just for test, Although we do it by `in-memory` auth meanwhile.  
 
 ## Use JWT token and use services
 Format of result describes on `README.md` file, In this section we discuss how we can use services.  

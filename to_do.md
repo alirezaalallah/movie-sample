@@ -1,5 +1,5 @@
 ### What are tasks remain for future:
-* This application is designed simple, and we can consider users table , movies table,...   
+* (:slightly_smiling_face) This application is designed simple, and we can consider users table , movies table,...   
 * Add docker and kubernetes manifest files
 * Store movie's data and sync with OMDB API it can help about performance and caching
 * Enable Swagger Api
