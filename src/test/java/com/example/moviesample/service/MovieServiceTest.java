@@ -77,15 +77,15 @@ public class MovieServiceTest {
         assertEquals("Comedy, Mystery, Sci-Fi", movie.getGenre());
         assertEquals("Danny Leiner", movie.getDirector());
         assertEquals("Philip Stark", movie.getWriter());
-        assertEquals("Ashton Kutcher, Seann William Scott, Jennifer Garner, Marla Sokoloff", movie.getActors());
+        assertEquals("Ashton Kutcher, Seann William Scott, Jennifer Garner", movie.getActors());
         assertEquals("Two potheads wake up after a night of partying and cannot remember where they parked their car.", movie.getPlot());
         assertEquals("English, Japanese, French", movie.getLanguage());
-        assertEquals("6 nominations.", movie.getAwards());
-        assertEquals("USA", movie.getCountry());
+        assertEquals("6 nominations", movie.getAwards());
+        assertEquals("United States", movie.getCountry());
         assertEquals(3, movie.getRatings().size());
         assertEquals("30", movie.getMetaScore());
         assertEquals("5.5", movie.getImdbRating());
-        assertEquals("135,872", movie.getImdbVotes());
+        assertEquals("136,194", movie.getImdbVotes());
         assertEquals("tt0242423", movie.getImdbID());
         assertEquals(MovieType.MOVIE, movie.getType());
         assertEquals(new BigDecimal(46729800), movie.getBoxOffice());
@@ -96,16 +96,15 @@ public class MovieServiceTest {
         OMDBBusinessException exception = assertThrows(OMDBBusinessException.class, () -> {
             movieService.checkMovieWonState(null);
         });
-        assertEquals(exception.getMessage(), "Incorrect IMDb ID.");
+        assertEquals("Incorrect IMDb ID.", exception.getMessage());
     }
 
     @Test
     public void givenInvalidName_thenOMDBReturnOMDBBusinessException() {
         String INVALID_MOVIE_NAME = "bbbbbbb";
-        OMDBBusinessException exception = assertThrows(OMDBBusinessException.class, () -> {
-            movieService.checkMovieWonState(INVALID_MOVIE_NAME);
-        });
-        assertEquals(exception.getMessage(), "Movie not found!");
+        OMDBBusinessException exception =
+                assertThrows(OMDBBusinessException.class, () -> movieService.checkMovieWonState(INVALID_MOVIE_NAME));
+        assertEquals("Movie not found!", exception.getMessage());
     }
 
     @Test

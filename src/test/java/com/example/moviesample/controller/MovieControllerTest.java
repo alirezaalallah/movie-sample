@@ -111,14 +111,14 @@ public class MovieControllerTest {
                 .genre("Comedy, Mystery, Sci-Fi")
                 .director("Danny Leiner")
                 .writer("Philip Stark")
-                .actors("Ashton Kutcher, Seann William Scott, Jennifer Garner, Marla Sokoloff")
+                .actors("Ashton Kutcher, Seann William Scott, Jennifer Garner")
                 .plot("Two potheads wake up after a night of partying and cannot remember where they parked their car.")
                 .language("English, Japanese, French")
-                .awards("6 nominations.")
-                .country("USA")
+                .awards("6 nominations")
+                .country("United States")
                 .metaScore("30")
                 .imdbRating("5.5")
-                .imdbVotes("135,872")
+                .imdbVotes("136,194")
                 .imdbID("tt0242423")
                 .ratings(new ArrayList<>() {{
                     add(Rate.builder().source("Internet Movie Database").value("5.5/10").build());
