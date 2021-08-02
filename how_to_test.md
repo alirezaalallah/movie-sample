@@ -6,7 +6,7 @@ There is three service available in movie service as below:
   **POST**`/api/v1/movie/rate`
 * Obtain top-ten rated movies based on users rates  
   **GET**`/api/v1/movie/top-ten`
-* User token service to obtain JWT token belongs to user for use movie services.
+* User token service to obtain JWT token belongs to user for use movie services.  
 **POST** `api/v1/user/getToken`
 
 ### Obtain JWT token:
