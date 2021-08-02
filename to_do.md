@@ -1,4 +1,4 @@
-### What are tasks remain for future:
+### What are tasks are remained for future:
 * This application is designed simple, and we can consider users table , movies table,...   
 * Add docker and kubernetes manifest files
 * Store movie's data and sync with OMDB API it can help about performance and caching
